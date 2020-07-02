@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+.my-container {
+  border: 2px solid green;
+}
+
+.my-row {
+  border: 2px solid blue;
+}
+
+.my-col {
+  border: 2px solid red;
+}
+

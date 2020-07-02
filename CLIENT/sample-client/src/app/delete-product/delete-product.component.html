@@ -1,0 +1,35 @@
+<div>
+    
+    <form [formGroup]="productForm" (ngSubmit)="SubmitProductForm()" novalidate>
+
+        <div class="form-row mb-4">
+            <div class="col">
+                <select class="form-control" (change)="userSelectedOption($event.target.value)" formControlName="name">
+                    <option [hidden]="selectedIndex!=-1">Select a Product</option> 
+                    <option (click)="userSelectedOption(product.name)" *ngFor="let product of products">{{product.name}}</option>
+                </select>
+            </div>
+
+        </div>
+
+        <input type="hidden" class="form-control" formControlname="id">
+
+        <div  [hidden]="selectedIndex==-1">
+
+            <div class="form-row">
+                
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-info">Delete Product</button>
+                </div>
+    
+            </div>
+
+            <div>
+                {{productForm.value | json}}
+            </div>
+
+        </div>
+
+    </form>
+
+</div>

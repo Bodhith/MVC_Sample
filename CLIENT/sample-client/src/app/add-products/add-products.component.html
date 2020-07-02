@@ -1,0 +1,37 @@
+
+
+
+
+<div>
+    
+    <form [formGroup]="productForm" (ngSubmit)="SubmitProductForm()" novalidate>
+        <div class="form-row mb-4">
+          <div class="col">
+            <select class="form-control" formControlName="name">
+                <option>pulses</option>
+                <option>grains</option>
+                <option>flours</option>
+                <option>oil</option>
+            </select>
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" formControlName="price" placeholder="Price per Kg">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" formControlName="quantityAvailable" placeholder="Quantity Availavle in Kg">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col text-center">
+            <button type="submit" class="btn btn-info">Add Product</button>
+          </div>
+        </div>
+        <div>
+            {{productForm.value | json}}
+        </div>
+      </form>
+
+</div>
+
+
+

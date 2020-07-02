@@ -1,0 +1,72 @@
+
+
+  <div class="m-0 p-0 my-container">
+
+    <div class="row p-1 pt-5 pb-5 m-1 my-row">
+
+      <div class="col-12 my-col">
+        
+      </div>
+
+    </div>
+
+    <div class="row p-1 m-1 mt-5 mb-5 my-row">
+
+      <div class="col-12 p-0 m-0 my-col">
+
+        <div class="row justify-content-around p-0 m-0 my-row">
+
+          <div class="col-4 p-0 m-0 text-center my-col">
+
+            <div class="mb-3">
+
+              <button type="button" name="AddProductsButton" (click)=" selectedMenu('AddProductsButton'); " class="btn btn-info">Add Products</button>
+
+            </div>
+
+            <div class="mb-3">
+
+              <button type="button" name="ModifyProductsButton" (click)=" selectedMenu('ModifyProductsButton'); " class="btn btn-info">Modify Products</button>
+
+            </div>
+
+            <div class="mb-3">
+
+              <button type="button" name="GenerateBillButton" (click)=" selectedMenu('GenerateBillButton'); " class="btn btn-info">Generate Bill</button>
+
+            </div>
+
+            <div>
+
+              <button type="button" name="DeleteProductButton" (click)=" selectedMenu('DeleteProductButton'); " class="btn btn-info">Delete Product</button>
+
+            </div>
+
+          </div>
+
+          <div class="col-6 p-0 m-0 my-col">
+
+            <app-add-products *ngIf=" this.button === 'AddProductsButton' "></app-add-products>
+            <app-modify-products *ngIf=" this.button === 'ModifyProductsButton' "></app-modify-products>
+            <app-generate-bill *ngIf=" this.button === 'GenerateBillButton' "></app-generate-bill>
+            <app-delete-product *ngIf=" this.button === 'DeleteProductButton' "></app-delete-product>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row p-1 pt-5 pb-5 m-1 my-row">
+
+      <div class="col-12 my-col">
+        
+      </div>
+
+    </div>
+
+  </div>
+
+
